@@ -31,7 +31,7 @@ function handleClick(e) {
 
 function catWon() {
   console.log('catWon()');
-  return false
+  return $('table.board td').text().length === 9
 }
 
 function changeCurrentPlayer() {
@@ -67,7 +67,7 @@ function resetBoard() {
 
 function hasWinner() {
   console.log('hasWinner()');
-  return true
+  return false
 }
 
 function setCellText(cell) {
