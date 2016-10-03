@@ -40,15 +40,26 @@ function changeCurrentPlayer() {
 
 function incrementScore() {
   console.log('incrementScore()');
+  var cell;
+  if (currentPlayer() === '1') {
+    cell = $('#player1Score')
+  } else {
+    cell = $('#player2Score')
+  }
+
+  var score = parseInt(cell.text())
+  score++
+  cell.text(score)
 }
 
 function resetBoard() {
   console.log('resetBoard()');
+  // $('table.board td').text('')
 }
 
 function hasWinner() {
   console.log('hasWinner()');
-  return false
+  return true
 }
 
 function setCellText(cell) {
