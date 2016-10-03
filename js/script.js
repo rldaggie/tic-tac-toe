@@ -62,7 +62,7 @@ function incrementScore() {
 
 function resetBoard() {
   console.log('resetBoard()');
-  // $('table.board td').text('')
+  $('table.board td').text('')
 }
 
 function hasWinner() {
