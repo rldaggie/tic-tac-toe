@@ -14,6 +14,7 @@ function handleClick(e) {
 
     if (hasWinner()) {
       // We have a winnner
+      alert('Player ' + currentPlayer() + ' won!')
       resetBoard()
       incrementScore()
       changeCurrentPlayer()
@@ -67,6 +68,16 @@ function resetBoard() {
 
 function hasWinner() {
   console.log('hasWinner()');
+  var cssClasses = ['row1', 'row2', 'row3', 'col1', 'col2', 'col3', 'diag1', 'diag2']
+  for (var i = 0; i < cssClasses.length; i++) {
+    var theClass = cssClasses[i]
+    console.log(theClass);
+    var row = $('table.board td.' + theClass).text()
+    console.log('row', row);
+    if (row === 'XXX' || row === 'OOO') {
+      return true;
+    }
+  }
   return false
 }
 
