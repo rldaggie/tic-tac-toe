@@ -36,6 +36,14 @@ function catWon() {
 
 function changeCurrentPlayer() {
   console.log('changeCurrentPlayer()');
+  var newPlayer;
+  if (currentPlayer() === '1') {
+    newPlayer = '2'
+  } else {
+    newPlayer = '1'
+  }
+
+  $('#currentPlayer').text(newPlayer)
 }
 
 function incrementScore() {
