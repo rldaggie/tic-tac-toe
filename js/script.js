@@ -10,7 +10,7 @@ function handleClick(e) {
     alert('Cell is already taken')
   } else {
     // Cell is empty
-    setCellText()
+    setCellText(cell)
 
     if (hasWinner()) {
       // We have a winnner
@@ -51,6 +51,15 @@ function hasWinner() {
   return false
 }
 
-function setCellText() {
+function setCellText(cell) {
   console.log('setCellText()');
+  if (currentPlayer() === '1') {
+    cell.text('X')
+  } else {
+    cell.text('O')
+  }
+}
+
+function currentPlayer() {
+  return $('#currentPlayer').text()
 }
